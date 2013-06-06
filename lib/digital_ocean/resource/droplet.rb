@@ -77,7 +77,7 @@ module DigitalOcean
       end
 
       def delete(id)
-        @connection.delete("/droplets/#{id}/destroy").body
+        @connection.get("/droplets/#{id}/destroy").body
       end
     end
   end
